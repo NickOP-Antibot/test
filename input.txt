@@ -13,3 +13,11 @@ sex : male
 name : jack mark
 age : 24
 sex : male
+
+name : han smitch
+age : 26
+sex : male
+
+name : alex max
+age : 30
+sex : male
