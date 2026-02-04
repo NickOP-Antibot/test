@@ -7,6 +7,7 @@ using namespace std;
 void checkname(string &, string &, bool &);
 void addname(string &);
 void fixname(string &);
+void fucsex(string &);
 
 int main() {
     string name,password;
@@ -72,12 +73,10 @@ void checkname(string &name, string &password, bool &found) {
             }
             cout << "\nFound your name : " << name << endl;
             cout << "\n--------Details---------" << endl;
-            for(int i = 0; i < 2; i++) {
-                if(getline(inputFile, line)) {
+            while(getline(inputFile, line)) {
                     cout << line << endl;
                 }
-            }
-            cout << "\n------------------------\n" << endl;
+            cout << "\n" << endl;
         }
     }
     if (!found) {
@@ -97,8 +96,7 @@ void addname(string &name) {
         string sex;
         cout << "Enter your age: ";
         cin >> age;
-        cout << "Enter your sex (male/female): ";
-        cin >> sex;
+        fucsex(sex);
         cout << "Set your password (numeric): ";
         cin >> password;
         ofstream outputFile("costomer/" + name + ".txt", ios::app);
@@ -113,9 +111,13 @@ void addname(string &name) {
         outputFile << "sex : " << sex << endl;
         outputFile << "\n--------History---------" << endl;
         outputFile.close();
+        cout << "\n------------------------" << endl;
         cout << "Name added to the file." << endl;
+        cout << "------------------------\n" << endl;
     } else {
+        cout << "\n------------------------" << endl;
         cout << "Exiting without adding name." << endl;
+        cout << "------------------------\n" << endl;
     }
 }
 
@@ -128,5 +130,19 @@ void fixname(string &name) {
         if (name[i] >= 65 && name[i] <= 90) {
             name[i] = name[i] + 32;
         }
+    }
+}
+
+void fucsex(string &sex) {
+    cout << "Enter your sex (male/female): ";
+    cin >> sex;
+    if (sex == "male" || sex == "Male" || sex == "MALE" || sex == "m" || sex == "M") {
+        sex = "male";
+    } else if (sex == "female" || sex == "Female" || sex == "FEMALE" || sex == "f" || sex == "F") {
+        sex = "female";
+    } else {
+        cin.ignore();
+        cout << "Please enter again." << endl;
+        fucsex(sex);
     }
 }

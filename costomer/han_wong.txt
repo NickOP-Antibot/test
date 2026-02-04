@@ -1,0 +1,7 @@
+--------Details---------
+name : han_wong
+password : 741852
+age : 40
+sex : male
+
+--------History---------

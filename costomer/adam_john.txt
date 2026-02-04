@@ -1,0 +1,7 @@
+--------Details---------
+name : adam_john
+password : 456
+age : 25
+sex : female
+
+--------History---------
