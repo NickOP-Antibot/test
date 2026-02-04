@@ -5,15 +5,15 @@
 using namespace std;
 
 int main() {
-    ifstream inFile("testfile.txt");
-    if (!inFile) {
-        cerr << "Error opening file!" << endl;
+    ifstream inputFile("input.txt");
+    if (!inputFile) {
+        cerr << "Error opening file." << endl;
         return 1;
     }
-    string data;
-    while (getline(inFile, data)) {
-        cout << data << endl;
+    string line;
+    while (getline(inputFile, line)) {
+        cout << line << endl;
     }
-    inFile.close();
+    inputFile.close();
     return 0;
 }
