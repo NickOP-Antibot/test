@@ -15,7 +15,6 @@ time_t now = time(0);
 struct tm *timeinfo = localtime(&now);
 
 int main() {
-    cout << "-----Welcome to the Testing Program-----\n" << endl;
     string name,password;
     bool found = false;
     
@@ -89,7 +88,7 @@ void checkname(string &name, string &password, bool &found) {
             
             outputFile << setfill('0') << setw(2) << timeinfo->tm_mday << "/" << setw(2) << timeinfo->tm_mon + 1 << "/" << timeinfo->tm_year + 1900 << "\n";
             outputFile << setfill('0') << setw(2) << timeinfo->tm_hour << ":" << setw(2) << timeinfo->tm_min << ":" << setw(2) << timeinfo->tm_sec << "\n"<< endl;
-            
+
             cout << "\n" << endl;
         }
     }
