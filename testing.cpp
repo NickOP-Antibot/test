@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    ifstream inFile("test.txt");
+    ifstream inFile("testfile.txt");
     if (!inFile) {
         cerr << "Error opening file!" << endl;
         return 1;
