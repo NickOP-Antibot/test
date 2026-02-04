@@ -2,13 +2,13 @@ Detail of costomer
 
 name : chitsanupat amornpiyapong
 password : 123
-age : 20
+age : 2
 sex : male
 ------------------------
 
 name : nick max
 password : 456
-age : 21
+age : 28
 sex : male
 ------------------------
 
