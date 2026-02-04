@@ -48,7 +48,7 @@ int main() {
 
 
 void checkname(string &name, string &password, bool &found) {
-    ifstream inputFile(name + ".txt");
+    ifstream inputFile("costomer/" + name + ".txt");
     if (!inputFile) {
         cerr << "Name not found." << endl;
         return;
@@ -101,7 +101,7 @@ void addname(string &name) {
         cin >> sex;
         cout << "Set your password (numeric): ";
         cin >> password;
-        ofstream outputFile(name + ".txt", ios::app);
+        ofstream outputFile("costomer/" + name + ".txt", ios::app);
         if (!outputFile) {
             cerr << "Error opening file." << endl;
             return;
