@@ -1,0 +1,7 @@
+--------Details---------
+name : nick_mark
+password : 123456
+age : 25
+sex : male
+
+------------------------

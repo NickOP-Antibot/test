@@ -1,0 +1,7 @@
+--------Details---------
+name : nick_john
+password : 789
+age : 24
+sex : male
+
+--------History---------

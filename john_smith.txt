@@ -1,0 +1,7 @@
+--------Details---------
+name : john_smith
+password : 741
+age : 25
+sex : male
+
+--------History---------
