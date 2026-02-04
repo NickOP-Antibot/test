@@ -1,6 +1,8 @@
 #include<iostream>
 #include<string>
 #include<fstream>
+#include<iomanip>
+#include<ctime>
 
 using namespace std;
 
@@ -9,9 +11,16 @@ void addname(string &);
 void fixname(string &);
 void fucsex(string &);
 
+time_t now = time(0);
+struct tm *timeinfo = localtime(&now);
+
 int main() {
+    cout << "-----Welcome to the Testing Program-----\n" << endl;
     string name,password;
     bool found = false;
+    
+    cout << setfill('0') << setw(2) << timeinfo->tm_mday << "/" << setw(2) << timeinfo->tm_mon + 1 << "/" << timeinfo->tm_year + 1900 << "\n";
+    cout << setfill('0') << setw(2) << timeinfo->tm_hour << ":" << setw(2) << timeinfo->tm_min << ":" << setw(2) << timeinfo->tm_sec << "\n"<< endl;
 
     cout << "Enter your full-name : ";
     getline(cin, name);
@@ -50,6 +59,7 @@ int main() {
 
 void checkname(string &name, string &password, bool &found) {
     ifstream inputFile("costomer/" + name + ".txt");
+    ofstream outputFile("costomer/" + name + ".txt", ios::app);
     if (!inputFile) {
         cerr << "Name not found." << endl;
         return;
@@ -76,10 +86,15 @@ void checkname(string &name, string &password, bool &found) {
             while(getline(inputFile, line)) {
                     cout << line << endl;
                 }
+            
+            outputFile << setfill('0') << setw(2) << timeinfo->tm_mday << "/" << setw(2) << timeinfo->tm_mon + 1 << "/" << timeinfo->tm_year + 1900 << "\n";
+            outputFile << setfill('0') << setw(2) << timeinfo->tm_hour << ":" << setw(2) << timeinfo->tm_min << ":" << setw(2) << timeinfo->tm_sec << "\n"<< endl;
+            
             cout << "\n" << endl;
         }
     }
     inputFile.close();
+    outputFile.close();
 }
 
 void addname(string &name) {
