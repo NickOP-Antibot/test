@@ -2,7 +2,7 @@ Detail of costomer
 
 name : chitsanupat amornpiyapong
 password : 123
-age : 2
+age : 20
 sex : male
 ------------------------
 
