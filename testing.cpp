@@ -79,9 +79,6 @@ void checkname(string &name, string &password, bool &found) {
             cout << "\n" << endl;
         }
     }
-    if (!found) {
-        cout << "Name not found." << endl;
-    }
     inputFile.close();
 }
 
