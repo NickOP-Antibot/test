@@ -18,9 +18,6 @@ int main() {
     string name,password;
     bool found = false;
     
-    cout << setfill('0') << setw(2) << timeinfo->tm_mday << "/" << setw(2) << timeinfo->tm_mon + 1 << "/" << timeinfo->tm_year + 1900 << "\n";
-    cout << setfill('0') << setw(2) << timeinfo->tm_hour << ":" << setw(2) << timeinfo->tm_min << ":" << setw(2) << timeinfo->tm_sec << "\n"<< endl;
-
     cout << "Enter your full-name : ";
     getline(cin, name);
     if (name.empty()) {
