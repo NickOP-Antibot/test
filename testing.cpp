@@ -86,8 +86,8 @@ void checkname(string &name, string &password, bool &found) {
                     cout << line << endl;
                 }
             
-            outputFile << setfill('0') << setw(2) << timeinfo->tm_mday << "/" << setw(2) << timeinfo->tm_mon + 1 << "/" << timeinfo->tm_year + 1900 << "\n";
-            outputFile << setfill('0') << setw(2) << timeinfo->tm_hour << ":" << setw(2) << timeinfo->tm_min << ":" << setw(2) << timeinfo->tm_sec << "\n"<< endl;
+            outputFile << "Log in : " << setfill('0') << setw(2) << timeinfo->tm_mday << "/" << setw(2) << timeinfo->tm_mon + 1 << "/" << timeinfo->tm_year + 1900 << "\n";
+            outputFile << "Time : " << setfill('0') << setw(2) << timeinfo->tm_hour << ":" << setw(2) << timeinfo->tm_min << ":" << setw(2) << timeinfo->tm_sec << "\n"<< endl;
 
             cout << "\n" << endl;
         }
